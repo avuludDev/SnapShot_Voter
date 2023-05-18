@@ -1,0 +1,12 @@
+directories:
+  output: dist
+  buildResources: build
+appId: Avulud
+asar: true
+win:
+  target: portable
+  signingHashAlgorithms:
+    - sha256
+npmRebuild: false
+files: []
+electronVersion: 23.3.2

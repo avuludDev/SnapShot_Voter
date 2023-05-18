@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>SnapShot Voter</title>
+        <link rel="stylesheet" type="text/css" href="./assets/style/style.css">
+    </head>
+    <body>
+        <div class="main_section">
+            <div class="init_section">
+                <div class="wallets_section">
+                    <p class="lang_walletsChoose"><b>Выберите файл с кошельками:</b></p>
+                    <div>
+
+                        <label for="wallet_file">Wallets.txt</label>
+                        <input type="file" id="wallet_file">
+                    </div>
+                    <div>
+                        <p><span class="lang_wallets">Кошельки</span>: <span
+                                id="wallet_count">0</span></p>
+                    </div>
+                </div>
+            </div>
+            <h1 style="margin-left: 15px;" class="lang_projects">Snapshot Vote</h1>
+            <div class="flex">
+                <div class="choose_section">
+                    <h1 class="lang_bridges">Сеть</h1>
+
+                    <div>
+                        <p class="lang_bridgeSingle">Выберите сеть для
+                            голосования</p>
+                        <div class="checkbox_row">
+                            <select id="chain">
+                                <option value="Ethereum">Ethereum</option>
+                                <option value="Optimism">Optimism</option>
+                                <option value="Arbitrum">Arbitrum</option>
+                                <option value="Polygon">Polygon</option>
+                                <option value="BSC">BNB chain</option>
+                                <option value="Avalanche">Avalanche</option>
+                                <option value="Moonbeam">MoonBeam</option>
+                                <option value="Fantom">Fantom</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div  class="choose_section">
+                    <h1 class="lang_bridges">Голосование</h1>
+                    <div>
+                        <p class="lang_bridgeSingle">Вставьте ссылку на
+                            голосование</p>
+                        <div class="checkbox_row">
+                            <input type="text" id="link-proposal">
+                        </div>
+                    </div>
+                </div>
+                <div  class="choose_section">
+                    <h1 class="lang_bridges">Вариант выбора</h1>
+                    <div>
+                        <p class="lang_bridgeSingle">Выберите вариант для
+                            голосования</p>
+                        <select id="choice">
+                            <option value="0" class="lang_network">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="random">Рандом</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="settings_section">
+                <h1 class="lang_settings">Настройки</h1>
+                <div class="settings_delays">
+                    <div>
+                        <div class="wallets-delay_settings set">
+                            <p><b class="lang_walletDelay">Границы рандомной
+                                    задержки между кошельками
+                                    (сек)</b></p>
+                            <div>
+                                <i>от</i>
+                                <input type="number" value="10" min="1"
+                                    id="wallet-time-min"
+                                    placeholder="10">
+                                <i>до</i>
+                                <input type="number" value="20" min="1"
+                                    id="wallet-time-max"
+                                    placeholder="20">
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                    <p><b>Следовать проекту</b></p> 
+                    <input type="checkbox" id="follow">                           
+                    
+                    </div>
+                </div>
+                </div>
+                <div class="logs_btns">
+                    <button class="lang_start start_btn " id="start">Начать</button>
+                </div>
+            </div>
+        </div>
+        <div class="logs">
+            <div class="header_logs">
+                <h1 class="lang_logs">Логи</h1>
+            </div>
+            <ol class="logs-text" id="logs-text">
+
+            </ol>
+        </div>
+        <script>require('./app/front.js')</script>
+        
+    </body>
+</html>
